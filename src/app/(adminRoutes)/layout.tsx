@@ -1,3 +1,4 @@
+import { AdminNavBar } from "@/components";
 import type { PropsWithChildren } from "react";
 
 
@@ -6,7 +7,7 @@ export default function AdminLayout({
 }: PropsWithChildren<unknown>) {
   return (
     <div>
-      <h1>Admin Layout</h1>
+      <AdminNavBar />
       {children}
     </div>
   );

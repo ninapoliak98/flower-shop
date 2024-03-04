@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import { prisma } from '@/prisma';
 import Image from 'next/image';
+import { InputImage } from '@/components';
 
 const ProductsPage: FC = async () => {
   const user = await prisma.user.findFirst({
@@ -13,13 +14,13 @@ const ProductsPage: FC = async () => {
     <div>
       <form action=''>
         <div>
-          <Image src={''} alt={''} />
+          <InputImage inputName={'productImage'} imgWidth={250} imgHeight={300} />
         </div>
         <div>
           <div>
-            <input type="file" name="productImage" />
-            <input type="file" name="productImage" />
-            <input type="file" name="productImage" />
+            <InputImage inputName={'productImage'} imgWidth={200} imgHeight={250} />
+            <InputImage inputName={'productImage'} imgWidth={200} imgHeight={250} />
+            <InputImage inputName={'productImage'} imgWidth={200} imgHeight={250} />
           </div>
           <div>
             <input type="text" name='name' placeholder='Name...' />
